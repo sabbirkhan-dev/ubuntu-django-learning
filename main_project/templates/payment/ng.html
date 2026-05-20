@@ -1,0 +1,9 @@
+{% extends 'common_code/base.html' %}
+    {% block title %} Nagad {% endblock title %}
+{% block content %}
+    <h1 style="text-align: center; color: rgb(255, 84, 22);">Nagad</h1>
+    
+    {% for friend in friends %}
+    <li>{{forloop.first}} {{friend}}</li>
+    {% endfor %}
+{% endblock content %}

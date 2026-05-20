@@ -1,0 +1,18 @@
+{% extends 'common_code/base.html' %}
+
+{% block title %} Bkash {% endblock title %}
+
+{% block content %}
+    <h1 style="text-align: center; color: brown;">Bkash Payment</h1>
+    <p style="text-align: center; color: darkgreen;">
+        I'm using payment by {{ name }}
+    </p>
+
+    {% if pd.pm and pd.dis %}
+        <h1 style="text-align: center; color: brown;">
+            You payment {{ pd.pm }} so you can get Discount: {{ pd.dis }}
+        </h1>
+    {% else %}
+        <p>File Not Found</p>
+    {% endif %}
+{% endblock content %}

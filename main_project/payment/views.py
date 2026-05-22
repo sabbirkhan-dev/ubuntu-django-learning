@@ -22,3 +22,12 @@ from .models import Payment
 def payment_method(request):
     pay_m = Payment.objects.all()
     return render(request, 'payment/payment.html', {'pay': pay_m})
+
+
+# form link start here
+from .forms import RecentProduct
+def recent_product(request):
+    frm = RecentProduct(auto_id=True, label_suffix=' - ')
+    frm.order_fields(field_order=['Email', 'Laptop','Mobile'])
+
+    return render(request, 'payment/recent_product.html', {'form': frm})

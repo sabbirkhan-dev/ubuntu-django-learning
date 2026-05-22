@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recent Product</title>
+</head>
+<body>
+
+    <h2>Recent Product Form</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+    <div>
+        {{form.Email.label_tag}}
+        {{form.Email}}
+    </div>
+
+</body>
+</html>

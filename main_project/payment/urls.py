@@ -6,5 +6,6 @@ urlpatterns= [
     path('bk/', views.bk, name= 'bk'),
     path('ng/', views.ng, name= 'ng'),
     path('payment/', views.payment_method, name= 'payment'),
-    path('rp/', views.recent_product, name= 'rp')
+    path('rp/', views.recent_product, name= 'rp'),
+    path('successfully/', views.sand, name= 'successfully'),
 ]

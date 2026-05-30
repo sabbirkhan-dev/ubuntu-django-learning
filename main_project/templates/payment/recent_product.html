@@ -1,24 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="{% static 'payment/css/recent.css' %}">
     <title>Recent Product</title>
 </head>
 <body>
 
     <h2>Recent Product Form</h2>
 
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
 
         {{ form.as_p }}
 
         <button type="submit">Submit</button>
     </form>
-    <hr>
-    <div>
-        {{form.Email.label_tag}}
-        {{form.Email}}
-    </div>
 
 </body>
 </html>

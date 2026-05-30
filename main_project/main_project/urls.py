@@ -23,4 +23,5 @@ urlpatterns = [
     path('banana/', include('banana.urls')),
     path('orange/', include('orange.urls')),
     path('payment/', include('payment.urls')),
+    path('pdc/', include('payment.urls')),
 ]

@@ -50,3 +50,8 @@ def login_success(request):
 def logout_form(request):
     logout(request)
     return redirect("/apple/login/")
+
+from django.http import HttpResponse
+def mid(request):
+    print("First middleware")
+    return HttpResponse("This is first middleware")
